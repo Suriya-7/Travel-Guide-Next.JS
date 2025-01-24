@@ -28,7 +28,7 @@ const PopularDestinations = () => {
                 <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                   {destination.name}
                 </h3>
-                <p className="text-gray-600 mb-4">{destination.description}</p>
+                <p className="text-gray-600 mb-4">{destination.overview}</p>
                 <a
                   href={destination.link}
                   className="inline-block text-teal-600 hover:text-teal-800 font-semibold py-2 px-4 border-2 border-teal-600 hover:border-teal-800 rounded-lg transition-all duration-300"

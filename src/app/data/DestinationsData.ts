@@ -1,11 +1,26 @@
 export const destinations = [
   {
     name: "Paris",
-    description: "Explore the beauty of this breathtaking destination.",
+    overview:
+      "Paris, known as the 'City of Light', is famous for its art, fashion, and culture. It’s home to iconic landmarks like the Eiffel Tower and the Louvre Museum.",
+    thingsToDo: [
+      "Visit the Eiffel Tower",
+      "Explore the Louvre Museum",
+      "Walk along the Seine River",
+      "Shop at Champs-Élysées",
+    ],
+    bestSeason: "Spring (April to June) and Fall (September to November)",
+    famousLocalFood: ["Croissants", "Escargot", "Coq au Vin", "Macarons"],
+    localCurrency: "Euro (€)",
+    bestPlacesToVisit: [
+      "Eiffel Tower",
+      "Louvre Museum",
+      "Notre-Dame Cathedral",
+      "Montmartre",
+    ],
     imageUrl: "/Destination/Paris.jpg",
     link: "/explore/paris",
     details: {
-      bestSeason: "Spring (April to June) and Fall (September to November)",
       nativeLanguage: "French",
       visaRequired: ["USA", "India", "China"],
       visaNotRequired: ["EU countries", "UK", "Canada"],
@@ -13,11 +28,26 @@ export const destinations = [
   },
   {
     name: "Bali",
-    description: "Discover the charm of this hidden gem of the world.",
+    overview:
+      "Bali is a tropical paradise with stunning beaches, lush rice terraces, and rich cultural heritage. It's the perfect place for both relaxation and adventure.",
+    thingsToDo: [
+      "Visit the Sacred Monkey Forest",
+      "Explore Tanah Lot Temple",
+      "Relax on Kuta Beach",
+      "Hike Mount Batur",
+    ],
+    bestSeason: "April to October (Dry Season)",
+    famousLocalFood: ["Nasi Goreng", "Babi Guling", "Mie Goreng", "Sate Lilit"],
+    localCurrency: "Indonesian Rupiah (IDR)",
+    bestPlacesToVisit: [
+      "Sacred Monkey Forest",
+      "Tanah Lot Temple",
+      "Uluwatu Temple",
+      "Besakih Temple",
+    ],
     imageUrl: "/Destination/Bali.jpg",
     link: "/explore/bali",
     details: {
-      bestSeason: "April to October (Dry Season)",
       nativeLanguage: "Indonesian (Bahasa Indonesia)",
       visaRequired: ["USA", "UK", "Australia"],
       visaNotRequired: ["Japan", "Malaysia", "Singapore"],
@@ -25,11 +55,26 @@ export const destinations = [
   },
   {
     name: "Kyoto",
-    description: "A paradise for nature lovers and adventure seekers.",
+    overview:
+      "Kyoto, a city steeped in tradition, is famous for its temples, gardens, and beautiful cherry blossoms in the spring.",
+    thingsToDo: [
+      "Visit Kinkaku-ji (Golden Pavilion)",
+      "Explore Fushimi Inari Shrine",
+      "Walk through Arashiyama Bamboo Grove",
+      "See the cherry blossoms at Maruyama Park",
+    ],
+    bestSeason: "March to May (Spring) and October to November (Autumn)",
+    famousLocalFood: ["Kaiseki", "Yudofu", "Matcha Sweets", "Kyo-Soba"],
+    localCurrency: "Japanese Yen (¥)",
+    bestPlacesToVisit: [
+      "Kinkaku-ji (Golden Pavilion)",
+      "Fushimi Inari Shrine",
+      "Arashiyama Bamboo Grove",
+      "Gion District",
+    ],
     imageUrl: "/Destination/Kyoto.jpg",
     link: "/explore/kyoto",
     details: {
-      bestSeason: "March to May (Spring) and October to November (Autumn)",
       nativeLanguage: "Japanese",
       visaRequired: ["India", "China", "Russia"],
       visaNotRequired: ["USA", "EU countries", "Australia"],
@@ -37,23 +82,85 @@ export const destinations = [
   },
   {
     name: "New York",
-    description: "Experience culture, history, and adventure in one place.",
+    overview:
+      "The bustling city of New York offers everything from iconic landmarks to world-class museums, theaters, and diverse neighborhoods.",
+    thingsToDo: [
+      "Visit Times Square",
+      "Walk across Brooklyn Bridge",
+      "Tour Central Park",
+      "See a Broadway show",
+    ],
+    bestSeason: "April to June and September to November",
+    famousLocalFood: [
+      "New York-style Pizza",
+      "Bagels",
+      "Hot Dogs",
+      "Cheesecake",
+    ],
+    localCurrency: "USD (United States Dollar)",
+    bestPlacesToVisit: [
+      "Times Square",
+      "Central Park",
+      "Statue of Liberty",
+      "Empire State Building",
+    ],
     imageUrl: "/Destination/NYC.jpg",
     link: "/explore/nyc",
     details: {
-      bestSeason: "April to June and September to November",
       nativeLanguage: "English",
       visaRequired: ["India", "China", "Russia"],
       visaNotRequired: ["UK", "Canada", "EU countries"],
     },
   },
   {
+    name: "Venice",
+    overview:
+      "Venice is a city of canals, historic architecture, and art, famous for its gondola rides and the Carnival of Venice.",
+    thingsToDo: [
+      "Take a Gondola Ride",
+      "Visit St. Mark's Basilica",
+      "Explore the Doge's Palace",
+      "Wander through Rialto Market",
+    ],
+    bestSeason: "April to June and September to November",
+    famousLocalFood: ["Risotto", "Fritto Misto", "Cicchetti", "Tiramisu"],
+    localCurrency: "Euro (€)",
+    bestPlacesToVisit: [
+      "St. Mark's Basilica",
+      "Doge's Palace",
+      "Rialto Bridge",
+      "Grand Canal",
+    ],
+    imageUrl: "/Destination/Venice.jpg",
+    link: "/explore/venice",
+    details: {
+      nativeLanguage: "Italian",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["EU countries", "UK", "USA"],
+    },
+  },
+  {
     name: "Sydney",
-    description: "Experience culture, history, and adventure in one place.",
+    overview:
+      "Sydney is known for its stunning harbor, the iconic Opera House, and its vibrant cultural scene.",
+    thingsToDo: [
+      "Climb Sydney Harbour Bridge",
+      "Visit the Sydney Opera House",
+      "Relax at Bondi Beach",
+      "Explore the Royal Botanic Gardens",
+    ],
+    bestSeason: "September to November and March to May",
+    famousLocalFood: ["Meat Pies", "Lamingtons", "Pavlova", "Barbecued Shrimp"],
+    localCurrency: "Australian Dollar (AUD)",
+    bestPlacesToVisit: [
+      "Sydney Opera House",
+      "Sydney Harbour Bridge",
+      "Bondi Beach",
+      "Royal Botanic Gardens",
+    ],
     imageUrl: "/Destination/Sydney.jpg",
     link: "/explore/sydney",
     details: {
-      bestSeason: "September to November and March to May",
       nativeLanguage: "English",
       visaRequired: ["India", "China", "Russia"],
       visaNotRequired: ["UK", "EU countries", "Canada"],
@@ -61,35 +168,48 @@ export const destinations = [
   },
   {
     name: "Tokyo",
-    description: "Experience culture, history, and adventure in one place.",
+    overview:
+      "Tokyo blends traditional culture with modern innovation. It's a vibrant city full of shopping, technology, and historical landmarks.",
+    thingsToDo: [
+      "Visit Senso-ji Temple",
+      "Explore Akihabara for electronics",
+      "Walk through Shibuya Crossing",
+      "Shop in Harajuku",
+    ],
+    bestSeason: "March to May (Spring) and September to November (Autumn)",
+    famousLocalFood: ["Sushi", "Ramen", "Tempura", "Takoyaki"],
+    localCurrency: "Japanese Yen (¥)",
+    bestPlacesToVisit: [
+      "Senso-ji Temple",
+      "Shibuya Crossing",
+      "Tokyo Tower",
+      "Meiji Shrine",
+    ],
     imageUrl: "/Destination/Tokyo.jpg",
     link: "/explore/tokyo",
     details: {
-      bestSeason: "March to May (Spring) and September to November (Autumn)",
       nativeLanguage: "Japanese",
       visaRequired: ["India", "China", "Russia"],
       visaNotRequired: ["USA", "EU countries", "Canada"],
     },
   },
   {
-    name: "Venice",
-    description: "Experience culture, history, and adventure in one place.",
-    imageUrl: "/Destination/Venice.jpg",
-    link: "/explore/venice",
-    details: {
-      bestSeason: "April to June and September to November",
-      nativeLanguage: "Italian",
-      visaRequired: ["India", "China", "Russia"],
-      visaNotRequired: ["EU countries", "UK", "USA"],
-    },
-  },
-  {
     name: "Santorini",
-    description: "Experience culture, history, and adventure in one place.",
+    overview:
+      "Santorini is a beautiful Greek island known for its blue-domed churches, stunning sunsets, and unique volcanic beaches.",
+    thingsToDo: [
+      "Watch the sunset in Oia",
+      "Relax on the black sand beaches",
+      "Explore Akrotiri ruins",
+      "Visit the ancient city of Thira",
+    ],
+    bestSeason: "May to October (Summer)",
+    famousLocalFood: ["Moussaka", "Souvlaki", "Fava", "Baklava"],
+    localCurrency: "Euro (€)",
+    bestPlacesToVisit: ["Oia", "Akrotiri", "Fira", "Red Beach"],
     imageUrl: "/Destination/Santorini.jpg",
     link: "/explore/santorini",
     details: {
-      bestSeason: "May to October (Summer)",
       nativeLanguage: "Greek",
       visaRequired: ["India", "China", "Russia"],
       visaNotRequired: ["EU countries", "USA", "Canada"],
@@ -97,14 +217,30 @@ export const destinations = [
   },
   {
     name: "Dubai",
-    description: "Experience culture, history, and adventure in one place.",
+    overview:
+      "Dubai is a modern city known for its skyscrapers, luxury shopping, and its extravagant lifestyle.",
+    thingsToDo: [
+      "Visit the Burj Khalifa",
+      "Explore the Dubai Mall",
+      "Relax on Jumeirah Beach",
+      "Go on a Desert Safari",
+    ],
+    bestSeason: "November to March (Cooler weather)",
+    famousLocalFood: ["Shawarma", "Hummus", "Falafel", "Kebabs"],
+    localCurrency: "United Arab Emirates Dirham (AED)",
+    bestPlacesToVisit: [
+      "Burj Khalifa",
+      "Dubai Mall",
+      "Palm Jumeirah",
+      "Dubai Marina",
+    ],
     imageUrl: "/Destination/Dubai.jpg",
     link: "/explore/dubai",
     details: {
-      bestSeason: "November to March (Cooler weather)",
       nativeLanguage: "Arabic",
       visaRequired: ["India", "China", "Russia"],
       visaNotRequired: ["USA", "UK", "EU countries"],
     },
   },
 ];
+

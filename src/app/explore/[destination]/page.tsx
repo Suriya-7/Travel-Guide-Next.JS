@@ -17,8 +17,15 @@ const DestinationDetails = ({
     return null;
   }
 
-  const { bestSeason, nativeLanguage, visaRequired, visaNotRequired } =
-    destination.details;
+  const {
+    overview,
+    thingsToDo,
+    bestSeason,
+    details: { nativeLanguage, visaRequired, visaNotRequired },
+    famousLocalFood,
+    localCurrency,
+    bestPlacesToVisit,
+  } = destination;
 
   return (
     <div className="container mx-auto py-12">
@@ -30,11 +37,23 @@ const DestinationDetails = ({
         {/* Left side: Text Details */}
         <div className="flex-1">
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            {destination.description}
+            <strong>Overview:</strong> {overview}
           </p>
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md mb-8">
             <h2 className="text-2xl font-semibold text-teal-600 mb-4">
-              Destination Details
+              Things to Do
+            </h2>
+            <ul className="list-disc pl-6 text-gray-700">
+              {thingsToDo.map((activity, index) => (
+                <li key={index}>{activity}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md mb-8">
+            <h2 className="text-2xl font-semibold text-teal-600 mb-4">
+              Local Details
             </h2>
             <p className="text-gray-700 mb-2">
               <strong>Best Season to Visit:</strong> {bestSeason}
@@ -46,10 +65,27 @@ const DestinationDetails = ({
               <strong>Visa Required For:</strong>{" "}
               {visaRequired.length > 0 ? visaRequired.join(", ") : "None"}
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-700 mb-2">
               <strong>Visa Not Required For:</strong>{" "}
               {visaNotRequired.length > 0 ? visaNotRequired.join(", ") : "None"}
             </p>
+            <p className="text-gray-700 mb-2">
+              <strong>Famous Local Food:</strong> {famousLocalFood.join(", ")}
+            </p>
+            <p className="text-gray-700 mb-2">
+              <strong>Local Currency:</strong> {localCurrency}
+            </p>
+          </div>
+
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold text-teal-600 mb-4">
+              Best Places to Visit
+            </h2>
+            <ul className="list-disc pl-6 text-gray-700">
+              {bestPlacesToVisit.map((place, index) => (
+                <li key={index}>{place}</li>
+              ))}
+            </ul>
           </div>
         </div>
 
