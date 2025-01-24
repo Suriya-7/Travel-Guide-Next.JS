@@ -1,22 +1,21 @@
-// app/BeforeTravel/[travelid]/page.tsx
-import { BeforeTravel } from "../../data/TravelData"; // Import the correct module
-import { notFound } from "next/navigation"; // For handling 404 errors
+import { BeforeTravel, TravelPost } from "@/app/data/TravelData";
 import Image from "next/image";
-import { TravelPost } from "@/app/data/TravelData";
+import { notFound } from "next/navigation";
 
 interface BlogDetailProps {
   params: {
-    travelid: string; // Expecting the ID to be a string from the URL params
+    travelid: string; // The dynamic route parameter
   };
 }
 
-const BlogDetail = ({ params }: BlogDetailProps) => {
+export default function BlogDetail({ params }: BlogDetailProps) {
   const post = BeforeTravel.find(
-    (post: TravelPost) => post.id.toString() === params.travelid
+    (post: { id: { toString: () => string } }) =>
+      post.id.toString() === params.travelid
   );
 
   if (!post) {
-    notFound(); // This will return a 404 if the post is not found
+    notFound(); // Return 404 if the post is not found
   }
 
   return (
@@ -26,8 +25,8 @@ const BlogDetail = ({ params }: BlogDetailProps) => {
         <Image
           src={post.image}
           alt={post.alt}
-          width={1200} // Specify width for Next.js Image component
-          height={800} // Specify height for Next.js Image component
+          width={1200}
+          height={800}
           className="w-full h-96 object-cover mb-6"
         />
         <div className="text-gray-700 text-base leading-relaxed">
@@ -36,6 +35,4 @@ const BlogDetail = ({ params }: BlogDetailProps) => {
       </div>
     </div>
   );
-};
-
-export default BlogDetail;
+}

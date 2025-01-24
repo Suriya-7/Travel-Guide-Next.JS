@@ -42,7 +42,7 @@ const PopularDestinations = () => {
         {/* Explore More Destinations Button */}
         <div className="mt-12">
           <button
-            onClick={() => router.push("/destinations")}
+            onClick={() => router.push("/explore")}
             className="inline-block bg-teal-600 text-white font-semibold py-4 px-8 rounded-full text-xl shadow-lg hover:bg-teal-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 transform ease-in-out"
           >
             Explore More Destinations
