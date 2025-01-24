@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { BeforeTravel, TravelPost } from "../data/TravelData";
+import Image from "next/image";
 
 const beforeTravel: React.FC = () => {
   return (
@@ -22,10 +23,12 @@ const beforeTravel: React.FC = () => {
               key={post.id}
               className="bg-white shadow-lg rounded-lg overflow-hidden"
             >
-              <img
+              <Image
                 src={post.image}
                 alt={post.alt}
                 className="w-full h-48 object-cover mb-6"
+                width={500}
+                height={400}
               />
               <div className="p-6">
                 <h2 className="text-2xl font-semibold text-text-color mb-4">
@@ -37,7 +40,7 @@ const beforeTravel: React.FC = () => {
                     : post.content}
                 </p>
                 <Link
-                  href={`/BeforeTravel/${post.id}`}
+                  href={`/beforetravel/${post.id}`}
                   className="text-teal-800 mt-4 block"
                 >
                   Read More
