@@ -28,26 +28,26 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            href="/destinations"
-            className={`${
-              pathname === "/destinations"
-                ? "bg-teal-200 border-2 border-teal-500 rounded-lg"
-                : "text-gray-800 border-b-4 border-transparent"
-            } px-4 py-2 transition-all duration-300 ease-in-out`}
-          >
-            Destination
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/explore"
             className={`${
               pathname === "/explore"
                 ? "bg-teal-200 border-2 border-teal-500 rounded-lg"
                 : "text-gray-800 border-b-4 border-transparent"
-            } px-4 py-2  transition-all duration-300 ease-in-out`}
+            } px-4 py-2 transition-all duration-300 ease-in-out`}
           >
             Explore
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/beforetravel"
+            className={`${
+              pathname === "/beforetravel"
+                ? "bg-teal-200 border-2 border-teal-500 rounded-lg"
+                : "text-gray-800 border-b-4 border-transparent"
+            } px-4 py-2  transition-all duration-300 ease-in-out`}
+          >
+            Before Travel
           </Link>
         </li>
       </ul>

@@ -1,7 +1,7 @@
 "use client";
 import { FaArrowRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { destinations } from "../data/destinations";
+import { destinations } from "../data/DestinationsData";
 
 const PopularDestinations = () => {
   const router = useRouter();
