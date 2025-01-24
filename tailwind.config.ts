@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,9 +9,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Open Sans', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--primary-color)",    // Teal
+        secondary: "var(--secondary-color)", // Mint Green
+        accent: "var(--accent-color)",      // Yellow
+        background: "var(--background-color)",  // White
+        darkblue: "var(--text-color)",        // Dark Blue
       },
     },
   },
