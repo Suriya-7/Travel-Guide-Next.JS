@@ -1,4 +1,8 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 const Hero = () => {
+  const router = useRouter();
   return (
     <section className="flex flex-col md:flex-row justify-center items-center px-8 md:px-16 py-24 md:py-32 mx-auto max-w-screen-2xl">
       {/* Left Side - Content */}
@@ -10,7 +14,10 @@ const Hero = () => {
           Discover the world's most beautiful destinations. Plan your next
           adventure with our detailed travel guide.
         </p>
-        <button className="px-8 md:px-10 py-4 md:py-6 bg-teal-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
+        <button
+          onClick={() => router.push("/explore")}
+          className="lex items-center bg-teal-600 text-white py-3 px-6 rounded-lg text-lg hover:bg-teal-700 transition-all duration-300"
+        >
           Explore
         </button>
       </div>

@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Optional: You can also define some default background and text colors globally */
 body {
+  scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
