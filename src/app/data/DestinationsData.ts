@@ -1,56 +1,110 @@
 export const destinations = [
-    {
-      name: "Paris",
-      description: "Explore the beauty of this breathtaking destination.",
-      imageUrl: "/Destination/Paris.jpg",
-      link: "/destination1",
+  {
+    name: "Paris",
+    description: "Explore the beauty of this breathtaking destination.",
+    imageUrl: "/Destination/Paris.jpg",
+    link: "/explore/paris",
+    details: {
+      bestSeason: "Spring (April to June) and Fall (September to November)",
+      nativeLanguage: "French",
+      visaRequired: ["USA", "India", "China"],
+      visaNotRequired: ["EU countries", "UK", "Canada"],
     },
-    {
-      name: "Bali",
-      description: "Discover the charm of this hidden gem of the world.",
-      imageUrl: "/Destination/Bali.jpg",
-      link: "/destination2",
+  },
+  {
+    name: "Bali",
+    description: "Discover the charm of this hidden gem of the world.",
+    imageUrl: "/Destination/Bali.jpg",
+    link: "/explore/bali",
+    details: {
+      bestSeason: "April to October (Dry Season)",
+      nativeLanguage: "Indonesian (Bahasa Indonesia)",
+      visaRequired: ["USA", "UK", "Australia"],
+      visaNotRequired: ["Japan", "Malaysia", "Singapore"],
     },
-    {
-      name: "Kyoto",
-      description: "A paradise for nature lovers and adventure seekers.",
-      imageUrl: "/Destination/Kyoto.jpg",
-      link: "/destination3",
+  },
+  {
+    name: "Kyoto",
+    description: "A paradise for nature lovers and adventure seekers.",
+    imageUrl: "/Destination/Kyoto.jpg",
+    link: "/explore/kyoto",
+    details: {
+      bestSeason: "March to May (Spring) and October to November (Autumn)",
+      nativeLanguage: "Japanese",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["USA", "EU countries", "Australia"],
     },
-    {
-      name: "New York",
-      description: "Experience culture, history, and adventure in one place.",
-      imageUrl: "/Destination/NYC.jpg",
-      link: "/destination4",
+  },
+  {
+    name: "New York",
+    description: "Experience culture, history, and adventure in one place.",
+    imageUrl: "/Destination/NYC.jpg",
+    link: "/explore/nyc",
+    details: {
+      bestSeason: "April to June and September to November",
+      nativeLanguage: "English",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["UK", "Canada", "EU countries"],
     },
-    {
-      name: "Syndney",
-      description: "Experience culture, history, and adventure in one place.",
-      imageUrl: "/Destination/Sydney.jpg",
-      link: "/destination5",
+  },
+  {
+    name: "Sydney",
+    description: "Experience culture, history, and adventure in one place.",
+    imageUrl: "/Destination/Sydney.jpg",
+    link: "/explore/sydney",
+    details: {
+      bestSeason: "September to November and March to May",
+      nativeLanguage: "English",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["UK", "EU countries", "Canada"],
     },
-    {
-      name: "Tokyo",
-      description: "Experience culture, history, and adventure in one place.",
-      imageUrl: "/Destination/Tokyo.jpg",
-      link: "/destination6",
+  },
+  {
+    name: "Tokyo",
+    description: "Experience culture, history, and adventure in one place.",
+    imageUrl: "/Destination/Tokyo.jpg",
+    link: "/explore/tokyo",
+    details: {
+      bestSeason: "March to May (Spring) and September to November (Autumn)",
+      nativeLanguage: "Japanese",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["USA", "EU countries", "Canada"],
     },
-    {
-      name: "Venice",
-      description: "Experience culture, history, and adventure in one place.",
-      imageUrl: "/Destination/Venice.jpg",
-      link: "/destination7",
+  },
+  {
+    name: "Venice",
+    description: "Experience culture, history, and adventure in one place.",
+    imageUrl: "/Destination/Venice.jpg",
+    link: "/explore/venice",
+    details: {
+      bestSeason: "April to June and September to November",
+      nativeLanguage: "Italian",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["EU countries", "UK", "USA"],
     },
-    {
-      name: "Santorini",
-      description: "Experience culture, history, and adventure in one place.",
-      imageUrl: "/Destination/Santorini.jpg",
-      link: "/destination8",
+  },
+  {
+    name: "Santorini",
+    description: "Experience culture, history, and adventure in one place.",
+    imageUrl: "/Destination/Santorini.jpg",
+    link: "/explore/santorini",
+    details: {
+      bestSeason: "May to October (Summer)",
+      nativeLanguage: "Greek",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["EU countries", "USA", "Canada"],
     },
-    {
-      name: "Dubai",
-      description: "Experience culture, history, and adventure in one place.",
-      imageUrl: "/Destination/Dubai.jpg",
-      link: "/destination9",
+  },
+  {
+    name: "Dubai",
+    description: "Experience culture, history, and adventure in one place.",
+    imageUrl: "/Destination/Dubai.jpg",
+    link: "/explore/dubai",
+    details: {
+      bestSeason: "November to March (Cooler weather)",
+      nativeLanguage: "Arabic",
+      visaRequired: ["India", "China", "Russia"],
+      visaNotRequired: ["USA", "UK", "EU countries"],
     },
-  ];
+  },
+];
