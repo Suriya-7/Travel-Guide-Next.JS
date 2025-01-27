@@ -2,6 +2,12 @@ import { BeforeTravel, TravelPost } from "@/app/data/TravelData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { AiOutlineLink } from "react-icons/ai"; // Importing the anchor link icon
+import { PageProps } from "../../../../.next/types/app/layout";
+interface BlogDetailProps {
+  params: {
+    travelid: string; // The dynamic route parameter
+  };
+}
 
 interface BlogDetailProps {
   params: {
