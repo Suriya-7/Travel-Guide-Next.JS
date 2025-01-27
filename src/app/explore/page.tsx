@@ -32,10 +32,11 @@ const DestinationsPage = () => {
                 <Image
                   src={destination.imageUrl || "/placeholder.jpg"}
                   alt={`Image of ${destination.name}`}
-                  width={500}
-                  height={400}
+                  width={500} // set default width for fallback image
+                  height={400} // set default height for fallback image
                   className="w-full h-48 sm:h-64 object-cover rounded-t-lg"
                   loading="lazy"
+                  layout="intrinsic" // use intrinsic to maintain aspect ratio
                 />
                 {/* Destination Details */}
                 <div className="p-5">

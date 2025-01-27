@@ -14,7 +14,7 @@ const Hero = () => {
           Welcome to Travel Guide
         </h1>
         <p className="text-lg md:text-2xl text-gray-800 mb-8 max-w-lg mx-auto md:mx-0 opacity-90">
-          Discover the world's most beautiful destinations. Plan your next
+          Discover the world&apos;s most beautiful destinations. Plan your next
           adventure with our detailed travel guide.
         </p>
         <div className="flex justify-center md:justify-start">
