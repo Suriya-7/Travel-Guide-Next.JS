@@ -38,6 +38,7 @@ export default async function DestinationDetails({
     localimg,
     Foodimg,
     name,
+    overview,
   } = destination;
 
   return (
@@ -78,7 +79,7 @@ export default async function DestinationDetails({
               <h2 className="text-3xl font-semibold text-teal-700 mb-6">
                 Overview
               </h2>
-              <p className="text-gray-800 leading-relaxed">{localimg}</p>
+              <p className="text-gray-800 leading-relaxed">{overview}</p>
             </div>
 
             {/* Things to Do */}
