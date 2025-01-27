@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const TravelTips: React.FC = () => {
   return (
     <div className="relative h-screen flex items-center justify-center p-4 ">
       <div className="relative w-full max-w-[1500px] h-[600px] sm:h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
-        <img
+        <Image
           src="/travel-tips.jpg"
           alt="Travel Tips"
           className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-105"

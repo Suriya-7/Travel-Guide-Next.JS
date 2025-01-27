@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   const router = useRouter();
@@ -30,10 +31,12 @@ const Hero = () => {
 
       {/* Right Side - Image */}
       <div className="w-full md:w-1/2 flex justify-center">
-        <img
+        <Image
           src="/hero.jpg"
           alt="Beautiful travel destination with mountains and a lake"
           className="w-5/6 md:w-full h-auto rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105"
+          width={800}
+          height={600}
         />
       </div>
     </section>

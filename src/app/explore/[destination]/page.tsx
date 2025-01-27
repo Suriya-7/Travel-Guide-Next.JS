@@ -7,9 +7,7 @@ import {
   FaUtensils,
   FaMapMarkerAlt,
   FaLanguage,
-  FaMoneyBillWave,
   FaPassport,
-  FaRegSun,
 } from "react-icons/fa";
 
 const DestinationDetails = ({
@@ -28,14 +26,12 @@ const DestinationDetails = ({
   }
 
   const {
-    overview,
     thingsToDo,
     bestSeason,
     details: { nativeLanguage, visaRequired, visaNotRequired },
     famousLocalFood,
     localCurrency,
     bestPlacesToVisit,
-    imageUrl,
     Overviewimg,
     localimg,
     Foodimg,

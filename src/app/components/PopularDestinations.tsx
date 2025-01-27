@@ -2,6 +2,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { destinations } from "../data/DestinationsData";
+import Image from "next/image";
 
 const PopularDestinations = () => {
   const router = useRouter();
@@ -24,7 +25,7 @@ const PopularDestinations = () => {
               key={index}
               className="bg-white rounded-lg shadow-lg hover:shadow-xl transform transition-transform duration-300 hover:scale-105 overflow-hidden"
             >
-              <img
+              <Image
                 src={destination.imageUrl}
                 alt={`Image of ${destination.name}`}
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BeforeTravel, TravelPost } from "../data/TravelData";
 import Image from "next/image";
 
-const beforeTravel: React.FC = () => {
+const BeforeTravelPage: React.FC = () => {
   return (
     <div className="bg-background-color py-12 px-6">
       <div className="container mx-auto">
@@ -18,7 +18,7 @@ const beforeTravel: React.FC = () => {
 
         {/* Responsive Grid Layout */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {BeforeTravel.map((post: TravelPost) => (
+          {BeforeTravel.map((post) => (
             <div
               key={post.id}
               className="bg-white shadow-lg rounded-lg overflow-hidden"
@@ -54,4 +54,4 @@ const beforeTravel: React.FC = () => {
   );
 };
 
-export default beforeTravel;
+export default BeforeTravelPage;

@@ -1,5 +1,6 @@
 // components/Testimonials.tsx
 import React from "react";
+import Image from "next/image";
 
 const Testimonials: React.FC = () => {
   const testimonials = [
@@ -38,7 +39,7 @@ const Testimonials: React.FC = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg p-6 text-left transform transition-transform duration-300 hover:scale-105"
             >
-              <img
+              <Image
                 src={testimonial.imageUrl}
                 alt={testimonial.name}
                 className="w-16 h-16 rounded-full mx-auto mb-4"
