@@ -45,16 +45,14 @@ export default function BlogDetail({ params }: BlogDetailProps) {
         {/* Image Section (Right side) */}
         <div className="md:w-1/2">
           {/* Image wrapped in anchor */}
-          <a href={post.link || "#"} target="_blank" rel="noopener noreferrer">
-            <Image
-              src={post.image}
-              alt={post.alt}
-              width={1200}
-              height={800}
-              className="w-full h-96 sm:h-[500px] object-cover rounded-lg shadow-lg mb-8"
-              priority
-            />
-          </a>
+          <Image
+            src={post.image}
+            alt={post.alt}
+            width={1200}
+            height={800}
+            className="w-full h-96 sm:h-[500px] object-cover rounded-lg shadow-lg mb-8"
+            priority
+          />
         </div>
       </div>
     </div>

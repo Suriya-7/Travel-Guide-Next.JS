@@ -36,7 +36,8 @@ const DestinationsPage = () => {
                   height={400} // set default height for fallback image
                   className="w-full h-48 sm:h-64 object-cover rounded-t-lg"
                   loading="lazy"
-                  layout="intrinsic" // use intrinsic to maintain aspect ratio
+                  layout="intrinsic"
+                  // use intrinsic to maintain aspect ratio
                 />
                 {/* Destination Details */}
                 <div className="p-5">

@@ -19,7 +19,6 @@ export const BeforeTravel = [
       categories like clothes, toiletries, and electronics. Always keep important documents, medications, and valuables in your carry-on bag. 
       Remember to check the weather and pack versatile outfits for any conditions.
     `,
-    link: "https://example.com/related-article",
   },
   {
     id: 2,
@@ -32,7 +31,6 @@ export const BeforeTravel = [
       hotel bookings, and travel insurance. Don’t forget to include a copy of your identification and emergency contacts. Keeping these documents in 
       an organized travel wallet can make them easily accessible.
     `,
-    link: "https://example.com/related-article",
   },
   {
     id: 3,
@@ -44,7 +42,6 @@ export const BeforeTravel = [
       health concerns. Pack a personal health kit with essentials like medications, bandages, and antiseptic wipes. Research your destination for any 
       specific health risks or precautions. Be cautious about food and water safety, and always have travel insurance to cover unexpected medical emergencies.
     `,
-    link: "https://example.com/related-article",
   },
   {
     id: 4,
@@ -56,7 +53,6 @@ export const BeforeTravel = [
       destination. Allocate funds for essentials and set aside an emergency fund. Use travel budgeting apps or spreadsheets to track your expenses. Lastly, 
       research currency exchange rates to avoid surprises.
     `,
-    link: "https://example.com/related-article",
   },
   {
     id: 5,
@@ -67,7 +63,6 @@ export const BeforeTravel = [
       Traveling responsibly is essential for preserving our planet. Carry reusable water bottles, avoid single-use plastics, and choose eco-friendly accommodations. 
       Respect local wildlife and avoid activities that exploit animals or harm the environment. Support local businesses and conservation projects whenever possible.
     `,
-    link: "", // Assuming no link here for the fifth item.
   },
   {
     id: 6,
@@ -79,6 +74,5 @@ export const BeforeTravel = [
       numbers in your phone and on paper as a backup. Share your travel itinerary with friends or family. If something goes wrong, having a solid backup plan 
       will make all the difference.
     `,
-    link: "https://example.com/related-article",
   },
 ];

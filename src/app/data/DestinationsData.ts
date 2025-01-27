@@ -1,35 +1,5 @@
 export const destinations = [
   {
-    name: "Paris",
-    overview:
-      "Paris, known as the 'City of Light', is famous for its art, fashion, and culture. It’s home to iconic landmarks like the Eiffel Tower and the Louvre Museum.",
-    thingsToDo: [
-      "Visit the Eiffel Tower",
-      "Explore the Louvre Museum",
-      "Walk along the Seine River",
-      "Shop at Champs-Élysées",
-    ],
-    bestSeason: "Spring (April to June) and Fall (September to November)",
-    famousLocalFood: ["Croissants", "Escargot", "Coq au Vin", "Macarons"],
-    localCurrency: "Euro (€)",
-    bestPlacesToVisit: [
-      "Eiffel Tower",
-      "Louvre Museum",
-      "Notre-Dame Cathedral",
-      "Montmartre",
-    ],
-    imageUrl: "/Destination/Paris/Paris.jpg",
-    Overviewimg: "/Destination/Paris/Paris1.jpg",
-    localimg: "/Destination/Paris/Paris2.jpg",
-    Foodimg: "/Destination/Paris/Paris3.jpg",
-    link: "/explore/paris",
-    details: {
-      nativeLanguage: "French",
-      visaRequired: ["USA", "India", "China"],
-      visaNotRequired: ["EU countries", "UK", "Canada"],
-    },
-  },
-  {
     name: "Bali",
     overview:
       "Bali is a tropical paradise with stunning beaches, lush rice terraces, and rich cultural heritage. It's the perfect place for both relaxation and adventure.",
@@ -57,6 +27,36 @@ export const destinations = [
       nativeLanguage: "Indonesian (Bahasa Indonesia)",
       visaRequired: ["USA", "UK", "Australia"],
       visaNotRequired: ["Japan", "Malaysia", "Singapore"],
+    },
+  },
+  {
+    name: "Paris",
+    overview:
+      "Paris, known as the 'City of Light', is famous for its art, fashion, and culture. It's home to iconic landmarks like the Eiffel Tower and the Louvre Museum.",
+    thingsToDo: [
+      "Visit the Eiffel Tower",
+      "Explore the Louvre Museum",
+      "Walk along the Seine River",
+      "Shop at Champs-Élysées",
+    ],
+    bestSeason: "Spring (April to June) and Fall (September to November)",
+    famousLocalFood: ["Croissants", "Escargot", "Coq au Vin", "Macarons"],
+    localCurrency: "Euro (€)",
+    bestPlacesToVisit: [
+      "Eiffel Tower",
+      "Louvre Museum",
+      "Notre-Dame Cathedral",
+      "Montmartre",
+    ],
+    imageUrl: "/Destination/Paris/Paris.jpg",
+    Overviewimg: "/Destination/Paris/Paris1.jpg",
+    localimg: "/Destination/Paris/Paris2.jpg",
+    Foodimg: "/Destination/Paris/Paris3.jpg",
+    link: "/explore/paris",
+    details: {
+      nativeLanguage: "French",
+      visaRequired: ["USA", "India", "China"],
+      visaNotRequired: ["EU countries", "UK", "Canada"],
     },
   },
   {
