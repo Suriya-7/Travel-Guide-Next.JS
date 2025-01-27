@@ -6,6 +6,7 @@ interface BlogDetailProps {
   params: {
     travelid: string; // The dynamic route parameter
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export default function BlogDetail({ params }: BlogDetailProps) {
