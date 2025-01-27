@@ -3,13 +3,15 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { AiOutlineLink } from "react-icons/ai"; // Importing the anchor link icon
 
-interface BlogDetailProps {
-  post: TravelPost; // Pass the post data directly as prop
-}
-
-export default async function BlogDetail({ params }: { params: { travelid: string } }) {
+export default async function BlogDetail({
+  params,
+}: {
+  params: { travelid: string };
+}) {
   // Fetch the post data using async/await directly within the component
-  const post = BeforeTravel.find((post) => post.id.toString() === params.travelid);
+  const post = BeforeTravel.find(
+    (post) => post.id.toString() === params.travelid
+  );
 
   // If no post is found, trigger 404
   if (!post) {
