@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Right Side - Image */}
       <div className="w-full md:w-1/2 flex justify-center">
         <Image
-          src="/hero.jpg"
+          src="/Hero.jpg"
           alt="Beautiful travel destination with mountains and a lake"
           className="w-5/6 md:w-full h-auto rounded-lg shadow-xl transform transition-transform duration-500 hover:scale-105"
           width={800}
