@@ -57,3 +57,26 @@ export default function BlogDetail({ params }: BlogDetailProps) {
     </div>
   );
 }
+
+export async function getServerSideProps({
+  params,
+}: {
+  params: { travelid: string };
+}) {
+  // Ensure you return props as expected for dynamic routing
+  const post = BeforeTravel.find(
+    (post) => post.id.toString() === params.travelid
+  );
+
+  // If no post found, trigger 404
+  if (!post) {
+    return { notFound: true };
+  }
+
+  // Return props if post is found
+  return {
+    props: {
+      params, // Pass the params to your component
+    },
+  };
+}
