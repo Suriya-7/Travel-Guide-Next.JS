@@ -1,7 +1,6 @@
 import { destinations } from "@/app/data/DestinationsData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { AiOutlineLink } from "react-icons/ai"; // Importing the anchor link icon
 
 import {
   FaUtensils,
@@ -53,17 +52,24 @@ const DestinationDetails = ({
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white rounded-tl-full rounded-tr-full" />
       </div>
 
-      {/* Overlay Link Icon */}
-      <div className="absolute top-0 left-0 p-6 md:p-10 z-10">
-        <a>
-          <AiOutlineLink className="text-teal-500 w-16 h-16 mt-[400px] ml-16 transition-transform transform hover:scale-110" />
-        </a>
-      </div>
-
       {/* Main Content */}
       <div className="container mx-auto px-8 lg:px-16 mt-16">
-        <div className="flex flex-col lg:flex-row-reverse items-start gap-16 mb-16">
-          {/* Right Side: Image and Content */}
+        {/* First Section: Content on the left, Image on the right */}
+        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16">
+          {/* Left Side: Image */}
+          <div className="flex-1 max-w-full lg:h-full">
+            <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
+              <Image
+                src={imageUrl} // Dynamically loading image
+                alt={`Image of ${name}`}
+                width={1200}
+                height={1000}
+                className="transition-transform transform hover:scale-110 duration-500 object-cover h-full"
+              />
+            </div>
+          </div>
+
+          {/* Right Side: Content */}
           <div className="flex-1 space-y-16">
             {/* Overview Section */}
             <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
@@ -90,28 +96,15 @@ const DestinationDetails = ({
               </ul>
             </div>
           </div>
-
-          {/* Left Side: Image */}
-          <div className="flex-1 max-w-full lg:h-full">
-            <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
-              <Image
-                src="/Destination/cars.jpg" // Placeholder image for now
-                alt={`Image of ${name}`}
-                width={1200}
-                height={1000}
-                className="transition-transform transform hover:scale-110 duration-500 object-cover h-full"
-              />
-            </div>
-          </div>
         </div>
 
-        {/* Reversed Layout for Next Sections */}
-        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16">
-          {/* Left Side: Image */}
+        {/* Second Section: Content on the right, Image on the left */}
+        <div className="flex flex-col lg:flex-row-reverse items-start gap-16 mb-16">
+          {/* Right Side: Image */}
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
               <Image
-                src="/Destination/cars.jpg" // Placeholder image for now
+                src={imageUrl} // Dynamically loading image
                 alt={`Image of ${name}`}
                 width={1200}
                 height={1000}
@@ -120,7 +113,7 @@ const DestinationDetails = ({
             </div>
           </div>
 
-          {/* Right Side: Content */}
+          {/* Left Side: Content */}
           <div className="flex-1 space-y-16">
             {/* Local Details */}
             <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
@@ -159,9 +152,22 @@ const DestinationDetails = ({
           </div>
         </div>
 
-        {/* Additional Sections */}
-        <div className="flex flex-col lg:flex-row-reverse items-start gap-16 mb-16">
-          {/* Right Side: Image and Content */}
+        {/* Third Section: Content on the left, Image on the right */}
+        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16">
+          {/* Left Side: Image */}
+          <div className="flex-1 max-w-full lg:h-full">
+            <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
+              <Image
+                src={imageUrl} // Dynamically loading image
+                alt={`Image of ${name}`}
+                width={1200}
+                height={1000}
+                className="transition-transform transform hover:scale-110 duration-500 object-cover h-full"
+              />
+            </div>
+          </div>
+
+          {/* Right Side: Content */}
           <div className="flex-1 space-y-16">
             {/* Famous Local Food */}
             <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
@@ -196,19 +202,6 @@ const DestinationDetails = ({
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-
-          {/* Left Side: Image */}
-          <div className="flex-1 max-w-full lg:h-full">
-            <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
-              <Image
-                src="/Destination/cars.jpg" // Placeholder image for now
-                alt={`Image of ${name}`}
-                width={1200}
-                height={1000}
-                className="transition-transform transform hover:scale-110 duration-500 object-cover h-full"
-              />
             </div>
           </div>
         </div>
