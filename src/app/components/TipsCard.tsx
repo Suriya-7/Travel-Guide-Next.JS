@@ -9,6 +9,8 @@ const TravelTips: React.FC = () => {
           src="/travel-tips.jpg"
           alt="Travel Tips"
           className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-105"
+          width={1500}
+          height={600}
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white p-8 sm:p-6 md:p-8 space-y-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center tracking-wide leading-tight">

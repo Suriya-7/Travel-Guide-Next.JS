@@ -29,6 +29,8 @@ const PopularDestinations = () => {
                 src={destination.imageUrl}
                 alt={`Image of ${destination.name}`}
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
+                width={500}
+                height={400}
               />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
