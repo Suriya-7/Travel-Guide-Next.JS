@@ -7,7 +7,15 @@ interface BlogDetailProps {
   post: TravelPost; // Pass the post data directly as prop
 }
 
-export default function BlogDetail({ post }: BlogDetailProps) {
+export default async function BlogDetail({ params }: { params: { travelid: string } }) {
+  // Fetch the post data using async/await directly within the component
+  const post = BeforeTravel.find((post) => post.id.toString() === params.travelid);
+
+  // If no post is found, trigger 404
+  if (!post) {
+    notFound();
+  }
+
   return (
     <div className="bg-gray-100 py-16 px-6 md:px-12 m-20">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start relative">
@@ -42,28 +50,4 @@ export default function BlogDetail({ post }: BlogDetailProps) {
       </div>
     </div>
   );
-}
-
-// Refactored getServerSideProps
-export async function getServerSideProps({
-  params,
-}: {
-  params: { travelid: string };
-}) {
-  // Find the post by ID
-  const post = BeforeTravel.find(
-    (post) => post.id.toString() === params.travelid
-  );
-
-  // If no post is found, trigger 404
-  if (!post) {
-    return { notFound: true };
-  }
-
-  // Return the found post as a prop
-  return {
-    props: {
-      post, // Pass the post data directly as a prop
-    },
-  };
 }
