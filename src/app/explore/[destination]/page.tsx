@@ -1,6 +1,7 @@
 import { destinations } from "@/app/data/DestinationsData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { AiOutlineLink } from "react-icons/ai";
 
 import {
   FaUtensils,
@@ -41,7 +42,7 @@ const DestinationDetails = ({
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-teal-700 to-teal-600 text-white py-36">
+      <div className="relative bg-gradient-to-r from-teal-700 to-teal-600 text-white py-36 mb-16">
         <div className="container mx-auto px-8 lg:px-16 text-center">
           <h1 className="text-5xl font-extrabold mb-6">{name}</h1>
           <p className="text-lg lg:text-xl font-light mb-12">
@@ -53,9 +54,9 @@ const DestinationDetails = ({
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-8 lg:px-16 mt-16">
+      <div className="container mx-auto px-8 lg:px-16">
         {/* First Section: Content on the left, Image on the right */}
-        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16">
+        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16 border border-gray-300 rounded-xl p-8 shadow-xl">
           {/* Left Side: Image */}
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
@@ -72,7 +73,7 @@ const DestinationDetails = ({
           {/* Right Side: Content */}
           <div className="flex-1 space-y-16">
             {/* Overview Section */}
-            <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
+            <div>
               <h2 className="text-3xl font-semibold text-teal-700 mb-6">
                 Overview
               </h2>
@@ -80,7 +81,7 @@ const DestinationDetails = ({
             </div>
 
             {/* Things to Do */}
-            <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
+            <div>
               <h2 className="text-3xl font-semibold text-teal-700 flex items-center gap-3 mb-6">
                 <FaMapMarkerAlt className="text-teal-500" /> Things to Do
               </h2>
@@ -96,10 +97,15 @@ const DestinationDetails = ({
               </ul>
             </div>
           </div>
+
+          {/* Link Icon */}
+          <a>
+            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-1 ml-1" />
+          </a>
         </div>
 
         {/* Second Section: Content on the right, Image on the left */}
-        <div className="flex flex-col lg:flex-row-reverse items-start gap-16 mb-16">
+        <div className="flex flex-col lg:flex-row-reverse items-start gap-16 mb-16 border border-gray-300 rounded-xl p-8 shadow-xl">
           {/* Right Side: Image */}
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
@@ -116,7 +122,7 @@ const DestinationDetails = ({
           {/* Left Side: Content */}
           <div className="flex-1 space-y-16">
             {/* Local Details */}
-            <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
+            <div>
               <h2 className="text-3xl font-semibold text-teal-700 flex items-center gap-3 mb-6">
                 <FaLanguage className="text-teal-500" /> Local Details
               </h2>
@@ -134,7 +140,7 @@ const DestinationDetails = ({
             </div>
 
             {/* Visa Info */}
-            <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
+            <div>
               <h2 className="text-3xl font-semibold text-teal-700 flex items-center gap-3 mb-6">
                 <FaPassport className="text-teal-500" /> Visa Information
               </h2>
@@ -150,10 +156,15 @@ const DestinationDetails = ({
               </p>
             </div>
           </div>
+
+          {/* Link Icon */}
+          <a>
+            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-1 ml-1" />
+          </a>
         </div>
 
         {/* Third Section: Content on the left, Image on the right */}
-        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16">
+        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16 border border-gray-300 rounded-xl p-8 shadow-xl">
           {/* Left Side: Image */}
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
@@ -170,7 +181,7 @@ const DestinationDetails = ({
           {/* Right Side: Content */}
           <div className="flex-1 space-y-16">
             {/* Famous Local Food */}
-            <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
+            <div>
               <h2 className="text-3xl font-semibold text-teal-700 flex items-center gap-3 mb-6">
                 <FaUtensils className="text-teal-500" /> Famous Local Food
               </h2>
@@ -187,7 +198,7 @@ const DestinationDetails = ({
             </div>
 
             {/* Best Places to Visit */}
-            <div className="bg-white p-10 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow">
+            <div>
               <h2 className="text-3xl font-semibold text-teal-700 flex items-center gap-3 mb-6">
                 <FaMapMarkerAlt className="text-teal-500" /> Best Places to
                 Visit
@@ -204,6 +215,11 @@ const DestinationDetails = ({
               </ul>
             </div>
           </div>
+
+          {/* Link Icon */}
+          <a>
+            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-1 ml-1" />
+          </a>
         </div>
       </div>
     </div>
