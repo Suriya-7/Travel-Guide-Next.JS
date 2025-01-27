@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { BeforeTravel, TravelPost } from "../data/TravelData";
+import { BeforeTravel } from "../data/TravelData";
 import Image from "next/image";
 
 const BeforeTravelPage: React.FC = () => {
