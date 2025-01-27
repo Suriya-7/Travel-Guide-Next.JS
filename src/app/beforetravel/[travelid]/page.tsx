@@ -2,32 +2,18 @@ import { BeforeTravel, TravelPost } from "@/app/data/TravelData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { AiOutlineLink } from "react-icons/ai"; // Importing the anchor link icon
+
 interface BlogDetailProps {
-  params: {
-    travelid: string; // The dynamic route parameter
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
+  post: TravelPost; // Pass the post data directly as prop
 }
 
-export default function BlogDetail({ params }: BlogDetailProps) {
-  // Finding the post based on the dynamic route parameter
-  const post = BeforeTravel.find(
-    (post) => (post as TravelPost).id.toString() === params.travelid
-  );
-
-  // If no post is found, show a 404 page
-  if (!post) {
-    notFound();
-  }
-
+export default function BlogDetail({ post }: BlogDetailProps) {
   return (
     <div className="bg-gray-100 py-16 px-6 md:px-12 m-20">
-      {" "}
-      {/* Added margin-top here */}
-      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start">
+      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start relative">
         {/* React Icon (Top-left corner) */}
         <div className="absolute top-0 left-0 p-4 md:p-8 z-10">
-          <a>
+          <a href={`#${post.id}`} aria-label={`Link to post ${post.title}`}>
             <AiOutlineLink className="text-teal-600 w-16 h-16 mt-28 ml-16" />
           </a>
         </div>
@@ -44,7 +30,6 @@ export default function BlogDetail({ params }: BlogDetailProps) {
 
         {/* Image Section (Right side) */}
         <div className="md:w-1/2">
-          {/* Image wrapped in anchor */}
           <Image
             src={post.image}
             alt={post.alt}
@@ -59,25 +44,26 @@ export default function BlogDetail({ params }: BlogDetailProps) {
   );
 }
 
+// Refactored getServerSideProps
 export async function getServerSideProps({
   params,
 }: {
   params: { travelid: string };
 }) {
-  // Ensure you return props as expected for dynamic routing
+  // Find the post by ID
   const post = BeforeTravel.find(
     (post) => post.id.toString() === params.travelid
   );
 
-  // If no post found, trigger 404
+  // If no post is found, trigger 404
   if (!post) {
     return { notFound: true };
   }
 
-  // Return props if post is found
+  // Return the found post as a prop
   return {
     props: {
-      params, // Pass the params to your component
+      post, // Pass the post data directly as a prop
     },
   };
 }
