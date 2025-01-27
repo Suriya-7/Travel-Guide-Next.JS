@@ -8,12 +8,6 @@ interface BlogDetailProps {
   };
 }
 
-interface BlogDetailProps {
-  params: {
-    travelid: string; // The dynamic route parameter
-  };
-}
-
 export default function BlogDetail({ params }: BlogDetailProps) {
   // Finding the post based on the dynamic route parameter
   const post = BeforeTravel.find(
