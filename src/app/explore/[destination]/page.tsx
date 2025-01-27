@@ -10,12 +10,14 @@ import {
   FaPassport,
 } from "react-icons/fa";
 
-const DestinationDetails = ({
+export default async function DestinationDetails({
   params,
 }: {
-  params: { destination: string };
-}) => {
-  const destinationName = decodeURIComponent(params.destination.toLowerCase());
+  params: Promise<{ destination: string }>;
+}) {
+  const destinationName = decodeURIComponent(
+    (await params).destination.toLowerCase()
+  );
   const destination = destinations.find(
     (dest) => dest.name.toLowerCase() === destinationName
   );
@@ -223,6 +225,4 @@ const DestinationDetails = ({
       </div>
     </div>
   );
-};
-
-export default DestinationDetails;
+}

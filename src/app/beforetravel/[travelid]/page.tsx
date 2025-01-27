@@ -1,21 +1,20 @@
-import { BeforeTravel, TravelPost } from "@/app/data/TravelData";
-import { notFound } from "next/navigation";
+import { AiOutlineLink } from "react-icons/ai";
 import Image from "next/image";
-import { AiOutlineLink } from "react-icons/ai"; // Importing the anchor link icon
+import { BeforeTravel } from "../../data/TravelData"; // Adjust the import path as needed
 
-export default async function BlogDetail({
+export default async function BeforeTravelPage({
   params,
 }: {
-  params: { travelid: string };
+  params: Promise<{ travelid: string }>;
 }) {
-  // Fetch the post data using async/await directly within the component
-  const post = BeforeTravel.find(
-    (post) => post.id.toString() === params.travelid
-  );
+  // Wait for the params to resolve and extract the travelid
+  const { travelid } = await params;
 
-  // If no post is found, trigger 404
+  // Find the specific post based on the travelid
+  const post = BeforeTravel.find((post) => post.id === parseInt(travelid));
+
   if (!post) {
-    notFound();
+    return <p>Post not found</p>; // Handle the case where post is not found
   }
 
   return (
@@ -40,14 +39,16 @@ export default async function BlogDetail({
 
         {/* Image Section (Right side) */}
         <div className="md:w-1/2">
-          <Image
-            src={post.image}
-            alt={post.alt}
-            width={1200}
-            height={800}
-            className="w-full h-96 sm:h-[500px] object-cover rounded-lg shadow-lg mb-8"
-            priority
-          />
+          {post.image && (
+            <Image
+              src={post.image}
+              alt={post.alt || "Travel image"}
+              width={1200}
+              height={800}
+              className="w-full h-96 sm:h-[500px] object-cover rounded-lg shadow-lg mb-8"
+              priority
+            />
+          )}
         </div>
       </div>
     </div>
