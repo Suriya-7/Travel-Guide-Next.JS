@@ -1,9 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react"; // Importing an icon for the button
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const router = useRouter();
+
   return (
     <section className="flex flex-col md:flex-row justify-between items-center px-8 md:px-16 py-24 md:py-32 mx-auto max-w-screen-2xl space-y-8 md:space-y-0">
       {/* Left Side - Content */}
@@ -15,14 +16,16 @@ const Hero = () => {
           Discover the world's most beautiful destinations. Plan your next
           adventure with our detailed travel guide.
         </p>
-        <button
-          onClick={() => router.push("/explore")}
-          className="flex items-center justify-center bg-teal-600 text-white py-3 px-6 rounded-lg text-lg hover:bg-teal-700 hover:shadow-lg transition-all duration-300"
-          aria-label="Explore destinations"
-        >
-          Explore
-          <ArrowRight className="ml-2" size={20} />
-        </button>
+        <div className="flex justify-center md:justify-start">
+          <button
+            onClick={() => router.push("/explore")}
+            className="flex items-center justify-center bg-teal-600 text-white py-3 px-6 rounded-lg text-lg hover:bg-teal-700 hover:shadow-lg transition-all duration-300"
+            aria-label="Explore destinations"
+          >
+            Explore
+            <ArrowRight className="ml-2" size={20} />
+          </button>
+        </div>
       </div>
 
       {/* Right Side - Image */}
