@@ -21,14 +21,14 @@ export default function BlogDetail({ params }: BlogDetailProps) {
   }
 
   return (
-    <div className="bg-stone-100 py-16 px-6 md:px-12 m-20">
+    <div className="bg-gray-100 py-16 px-6 md:px-12 m-20">
       {" "}
       {/* Added margin-top here */}
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start">
         {/* React Icon (Top-left corner) */}
         <div className="absolute top-0 left-0 p-4 md:p-8 z-10">
           <a>
-            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-20 ml-16" />
+            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-28 ml-16" />
           </a>
         </div>
 

@@ -4,7 +4,7 @@ export interface TravelPost {
   image: string;
   alt: string;
   content: string;
-  link: string;
+  link: string; 
 }
 export const BeforeTravel = [
     {

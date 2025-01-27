@@ -36,6 +36,9 @@ const DestinationDetails = ({
     localCurrency,
     bestPlacesToVisit,
     imageUrl,
+    Overviewimg,
+    localimg,
+    Foodimg,
     name,
   } = destination;
 
@@ -61,7 +64,7 @@ const DestinationDetails = ({
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
               <Image
-                src={imageUrl} // Dynamically loading image
+                src={Overviewimg} // Dynamically loading image
                 alt={`Image of ${name}`}
                 width={1200}
                 height={1000}
@@ -77,7 +80,7 @@ const DestinationDetails = ({
               <h2 className="text-3xl font-semibold text-teal-700 mb-6">
                 Overview
               </h2>
-              <p className="text-gray-800 leading-relaxed">{overview}</p>
+              <p className="text-gray-800 leading-relaxed">{localimg}</p>
             </div>
 
             {/* Things to Do */}
@@ -110,7 +113,7 @@ const DestinationDetails = ({
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
               <Image
-                src={imageUrl} // Dynamically loading image
+                src={localimg} // Dynamically loading image
                 alt={`Image of ${name}`}
                 width={1200}
                 height={1000}
@@ -169,7 +172,7 @@ const DestinationDetails = ({
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
               <Image
-                src={imageUrl} // Dynamically loading image
+                src={Foodimg} // Dynamically loading image
                 alt={`Image of ${name}`}
                 width={1200}
                 height={1000}
