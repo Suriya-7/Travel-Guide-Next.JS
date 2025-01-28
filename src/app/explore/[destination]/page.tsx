@@ -1,7 +1,6 @@
 import { destinations } from "@/app/data/DestinationsData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { AiOutlineLink } from "react-icons/ai";
 
 import {
   FaUtensils,
@@ -101,9 +100,6 @@ export default async function DestinationDetails({
           </div>
 
           {/* Link Icon */}
-          <a>
-            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-1 ml-1" />
-          </a>
         </div>
 
         {/* Second Section: Content on the right, Image on the left */}
@@ -160,13 +156,10 @@ export default async function DestinationDetails({
           </div>
 
           {/* Link Icon */}
-          <a>
-            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-1 ml-1" />
-          </a>
         </div>
 
         {/* Third Section: Content on the left, Image on the right */}
-        <div className="flex flex-col lg:flex-row items-start gap-16 mb-16 border border-gray-300 rounded-xl p-8 shadow-xl">
+        <div className="flex flex-col lg:flex-row gap-16 mb-16 border border-gray-300 rounded-xl p-8 shadow-xl items-center">
           {/* Left Side: Image */}
           <div className="flex-1 max-w-full lg:h-full">
             <div className="overflow-hidden rounded-lg shadow-2xl relative h-full">
@@ -219,9 +212,6 @@ export default async function DestinationDetails({
           </div>
 
           {/* Link Icon */}
-          <a>
-            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-1 ml-1" />
-          </a>
         </div>
       </div>
     </div>

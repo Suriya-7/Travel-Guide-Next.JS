@@ -31,17 +31,17 @@ const BeforeTravelPage: React.FC = () => {
                 height={400}
               />
               <div className="p-6">
-                <h2 className="text-2xl font-semibold text-text-color mb-4">
+                <h2 className="text-2xl font-semibold text-text-color mb-4 min-h-16">
                   {post.title}
                 </h2>
-                <p className="text-gray-700 text-base mb-4">
+                <p className="text-gray-700 text-base mb-4 min-h-24">
                   {post.content.length > 180
                     ? post.content.slice(0, 180) + "..."
                     : post.content}
                 </p>
                 <Link
                   href={`/beforetravel/${post.id}`}
-                  className="text-teal-800 mt-4 block"
+                  className="text-teal-800 mt-4 block hover:underline"
                 >
                   Read More
                 </Link>

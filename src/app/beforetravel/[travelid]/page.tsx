@@ -1,4 +1,3 @@
-import { AiOutlineLink } from "react-icons/ai";
 import Image from "next/image";
 import { BeforeTravel } from "../../data/TravelData"; // Adjust the import path as needed
 
@@ -18,13 +17,11 @@ export default async function BeforeTravelPage({
   }
 
   return (
-    <div className="bg-gray-100 py-16 px-6 md:px-12 m-20">
-      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start relative">
+    <div className="bg-gray-100 py-16 px-6 md:px-12 m-20 ">
+      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-center relative">
         {/* React Icon (Top-left corner) */}
         <div className="absolute top-0 left-0 p-4 md:p-8 z-10">
-          <a href={`#${post.id}`} aria-label={`Link to post ${post.title}`}>
-            <AiOutlineLink className="text-teal-600 w-16 h-16 mt-28 ml-16" />
-          </a>
+          <a href={`#${post.id}`} aria-label={`Link to post ${post.title}`}></a>
         </div>
 
         {/* Content Section (Left side) */}
